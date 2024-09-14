@@ -1,5 +1,6 @@
  // Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+ import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-database.js";
  import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
  
@@ -65,6 +66,20 @@
 
  //Sinup codes
 
+ function dataSave() {
+    const db = getDatabase(app);
+
+    set(ref(db, 'user/' + document.getElementById("username").value),
+        {
+          username: document.getElementById("username").value,
+                
+          PhoneNumber: document.getElementById("password").value,
+          Email: document.getElementById("email").value
+
+          });
+          
+ }
+
 
 const signUp=document.getElementById('Register');
  signUp.addEventListener('click', (event)=>{
@@ -73,7 +88,10 @@ const signUp=document.getElementById('Register');
     const password=document.getElementById('password').value;
     const firstName=document.getElementById('username').value;
     
-
+    
+    dataSave()
+         
+    // Registration codes
     const auth=getAuth();
     const db=getFirestore();
 
@@ -83,7 +101,7 @@ const signUp=document.getElementById('Register');
         const userData={
             email: email,
             firstName: firstName,
-           
+            
         };
         showMessage('Account Created Successfully', 'signUpMessage');
         const docRef=doc(db, "users", user.uid);
@@ -105,6 +123,6 @@ const signUp=document.getElementById('Register');
             showMessage('unable to create User', 'signUpMessage');
         }
     })
- });
+});
 
 
