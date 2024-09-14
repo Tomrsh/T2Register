@@ -66,20 +66,6 @@
 
  //Sinup codes
 
- function dataSave() {
-    const db = getDatabase(app);
-
-    set(ref(db, 'user/' + document.getElementById("username").value),
-        {
-          username: document.getElementById("username").value,
-                
-          PhoneNumber: document.getElementById("password").value,
-          Email: document.getElementById("email").value
-
-          });
-          
- }
-
 
 const signUp=document.getElementById('Register');
  signUp.addEventListener('click', (event)=>{
@@ -88,9 +74,7 @@ const signUp=document.getElementById('Register');
     const password=document.getElementById('password').value;
     const firstName=document.getElementById('username').value;
     
-    
-    dataSave()
-         
+  
     // Registration codes
     const auth=getAuth();
     const db=getFirestore();
@@ -123,5 +107,23 @@ const signUp=document.getElementById('Register');
             showMessage('unable to create User', 'signUpMessage');
         }
     })
-});
+ });
+
+
+//get data save to database 
+
+  const db = getDatabase(app);
+document.getElementById("Register").addEventListener('click', function(e){
+              e.preventDefault();
+              set(ref(db, 'user/' + document.getElementById("username").value),
+              {
+   
+                username: document.getElementById("username").value,
+                
+                password: document.getElementById("password").value,
+                email: document.getElementById("email").value
+
+              });
+               
+})
 
