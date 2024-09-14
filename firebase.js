@@ -72,7 +72,7 @@ const signUp=document.getElementById('Register');
     const email=document.getElementById('email').value;
     const password=document.getElementById('password').value;
     const firstName=document.getElementById('username').value;
-    const lastName=document.getElementById('lName').value;
+    
 
     const auth=getAuth();
     const db=getFirestore();
@@ -83,7 +83,7 @@ const signUp=document.getElementById('Register');
         const userData={
             email: email,
             firstName: firstName,
-            lastName:lastName
+           
         };
         showMessage('Account Created Successfully', 'signUpMessage');
         const docRef=doc(db, "users", user.uid);
