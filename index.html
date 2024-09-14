@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>T2 Sinup</title>
+    <title>T2 Login</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="firebase.js"></script>
 </head>
@@ -19,30 +19,32 @@
         
         <!-- Login Form -->
         <div class="login-form">
-            <h2>Sinup</h2>
+            <h2>Login</h2>
             <form>
                 
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="username" id="username" name="username" required>
+                <div class="input-group" id="UserBox">
+                    
+                    <input placeholder="Username" type="username" id="username" name="username" >
                 </div>
                 <div class="input-group">
-                    <label for="email">E-mail</label>
-                    <input type="text" id="email" name="email" required>
+                    
+                    <input placeholder="E-mail" type="text" id="email" name="email" >
                 </div>
                 <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
+                    
+                    <input placeholder="Password" type="password" id="password" name="password" >
+                </div>
+                <div>
+                  <a href="">Forgot Password</a>
                 </div>
                 <div id="BtBox">
                     <button type="submit" id="Login">Login</button>
-                    <button type="submit" id="Register">Register</button>
+                    
                 </div>
             </form>
         </div>
+        <button onclick="UserBoxShow()" type="submit" id="Register">Register</button>
     </div>
-
-
-  <script src="main.js"></script>
+    
 </body>
 </html>

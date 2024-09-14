@@ -4,12 +4,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    
 }
 
 /* Body Background */
 body {
     background-color: #f0f0f0;
     display: flex;
+    text-align: center;
     justify-content: center;
     margin-top: 60px;
     height: 100vh;
@@ -46,14 +48,17 @@ body {
 
 /* Form Heading */
 .login-form h2 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 24px;
     color: black;
 }
 
+#UserBox{
+  display: flex;
+}
 /* Input Group Styling */
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-align: left;
 }
 
@@ -91,11 +96,17 @@ button {
 }
 a{
      
-    margin-left: 5%;
+    
 }
 #Register{
-    margin-left: 25%;
+  font-weight: bold;
+  color: royalblue;
+  background-color: ghostwhite;
+  border: 3px solid royalblue;
+    margin-top: 40%;
+    margin-left: 0%;
 }
 button:hover {
     background-color: darkblue;
 }
+

@@ -66,4 +66,45 @@
  //Sinup codes
 
 
+const signUp=document.getElementById('Register');
+ signUp.addEventListener('click', (event)=>{
+    event.preventDefault();
+    const email=document.getElementById('email').value;
+    const password=document.getElementById('password').value;
+    const firstName=document.getElementById('username').value;
+    const lastName=document.getElementById('lName').value;
+
+    const auth=getAuth();
+    const db=getFirestore();
+
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential)=>{
+        const user=userCredential.user;
+        const userData={
+            email: email,
+            firstName: firstName,
+            lastName:lastName
+        };
+        showMessage('Account Created Successfully', 'signUpMessage');
+        const docRef=doc(db, "users", user.uid);
+        setDoc(docRef,userData)
+        .then(()=>{
+            window.location.href='index.html';
+        })
+        .catch((error)=>{
+            console.error("error writing document", error);
+
+        });
+    })
+    .catch((error)=>{
+        const errorCode=error.code;
+        if(errorCode=='auth/email-already-in-use'){
+            showMessage('Email Address Already Exists !!!', 'signUpMessage');
+        }
+        else{
+            showMessage('unable to create User', 'signUpMessage');
+        }
+    })
+ });
+
 
