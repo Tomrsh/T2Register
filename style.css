@@ -1,0 +1,101 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Background */
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    height: 100vh;
+}
+
+/* Container for login form */
+.login-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 340px;
+    max-height: 400px;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+}
+
+/* Custom Logo Style */
+.logo {
+    margin-bottom: 20px;
+}
+
+.text-logo {
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+}
+
+.text-logo span {
+    color: blue;
+    font-size: 55px;
+}
+
+/* Form Heading */
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: black;
+}
+
+/* Input Group Styling */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: gray;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Login Button */
+#BtBox{
+    display: flex;
+    
+}
+
+button {
+    background-color: blue;
+    color: white;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%
+    
+}
+a{
+     
+    margin-left: 5%;
+}
+#Register{
+    margin-left: 25%;
+}
+button:hover {
+    background-color: darkblue;
+}

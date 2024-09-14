@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>T2 Sinup</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebase.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div id="signInMessage" class="messageDiv" style="display:none; color: red; "></div>
+
+        <!-- Logo with T2 -->
+        <div class="logo">
+            <span class="text-logo">T<span>2</span></span>
+        </div>
+        
+        <!-- Login Form -->
+        <div class="login-form">
+            <h2>Sinup</h2>
+            <form>
+                
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="username" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div id="BtBox">
+                    <button type="submit" id="Login">Login</button>
+                    <button type="submit" id="Register">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
