@@ -125,4 +125,3 @@ const signUp=document.getElementById('Register');
     })
 });
 
-
