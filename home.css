@@ -22,10 +22,11 @@ p{
     text-align: center;
 }
 div{
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 80%;
     height: 80%;
     
 }
@@ -33,5 +34,5 @@ div{
 video{
     width: 180px;
     height: 320px;
-    padding: 20px;
+    padding: 15px;
 }
